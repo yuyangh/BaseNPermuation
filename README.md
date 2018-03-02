@@ -1,2 +1,2 @@
-# Exercise
-Exercise I do
+# Knowledge
+Knowledge I gain
