@@ -1,7 +1,7 @@
-all: sudoku example1
+all: sudoku NQueen
 
-example1: example1.cpp
-	g++ -g -Wall example1.cpp -o example1
+NQueen: NQueen.cpp
+	g++ -g -Wall NQueen.cpp -o NQueen
 
 sudoku: sudoku.o main.cpp
 	g++ -g -Wall main.cpp sudoku.o -o sudoku
@@ -10,6 +10,6 @@ sudoku.o: sudoku.cpp sudoku.h
 	g++ -g -Wall -c sudoku.cpp -o sudoku.o
 
 clean:
-	-@rm example1 
+	-@rm NQueen 
 	-@rm sudoku 
 	-@rm sudoku.o
