@@ -13,6 +13,7 @@ class BSTree {
 	public:
 		BSTree();
 		~BSTree();
+		void postOrderDeleteHelper(Item<T>* node);
 		bool search(const T& value);
 		bool empty();
 		int size();
@@ -42,7 +43,24 @@ BSTree<T>::BSTree() {
 
 template <typename T>
 BSTree<T>::~BSTree() {
-	delete root;
+	postOrderDeleteHelper(root);
+}
+
+template <typename T>
+void BSTree<T>::postOrderDeleteHelper(Item<T>* node){
+	// TODO
+	/*
+     * Go to Current's Left Child
+     * Go to Current's Right Child
+     * Operation on Current
+     */
+	if(node->left != NULL) {
+		postOrderDeleteHelper(node->left);
+	}
+	if(node->right != NULL) {
+		postOrderDeleteHelper(node->right);
+	}
+	delete(node);
 }
 
 template <typename T>
@@ -96,7 +114,7 @@ Item<T>* BSTree<T>::insertInTree(Item<T>* &node, const T& value) {
 
     // add as the leaf node
     if(node == NULL) {
-        auto temp=new Item<T>();
+		Item<T>* temp=new Item<T>();
         temp->val=value;
         // if it is the root node
         if(node==root){
