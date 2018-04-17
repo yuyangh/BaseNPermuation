@@ -197,10 +197,10 @@ void BSTree<T>::preOrderTraversalHelper(std::vector<T> &list, Item<T> *node) {
         list.push_back(node->val);
     }
     if (node->left != NULL) {
-        inOrderTraversalHelper(list, node->left);
+        preOrderTraversalHelper(list, node->left);
     }
     if (node->right != NULL) {
-        inOrderTraversalHelper(list, node->right);
+        preOrderTraversalHelper(list, node->right);
     }
 }
 
