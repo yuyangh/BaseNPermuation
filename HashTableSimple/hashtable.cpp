@@ -94,7 +94,7 @@ void HashTable::remove(string name) {
 
 	// TODO
     if(find(name)){
-        for (int index = 0; index <data[hash]->size() ; ++index) {
+        for (size_t index = 0; index <data[hash]->size() ; ++index) {
             if(name==(*data[hash])[index])
                 data[hash]->erase(data[hash]->begin()+index);
         }
