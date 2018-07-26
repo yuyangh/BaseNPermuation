@@ -16,6 +16,6 @@ def clearBlankLine(documentHasEmptyLine, newDocumentWithoutEmptyLine):
 
 
 if __name__ == '__main__':
-    documentHasEmptyLine = '/Users/yuyanghuang/PycharmProjects/MachineLearning/OCR_Project/Data/differentEstimatedPicturePath.txt'
+    documentHasEmptyLine = '/Users/yuyanghuang/PycharmProjects/MachineLearning/OCR_Project/data/differentEstimatedPicturePath.txt'
     newDocumentWithoutEmptyLine = 'differentEstimatedPicturePath.txt'
     clearBlankLine(documentHasEmptyLine, newDocumentWithoutEmptyLine)

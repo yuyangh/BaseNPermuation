@@ -6,7 +6,7 @@ import json
 import os
 
 
-# filePath="Data/正确.xlsx"
+# filePath="data/正确.xlsx"
 
 def read07Excel(path):
     wb = openpyxl.load_workbook(path)
