@@ -48,3 +48,26 @@ def getNameURLList(path):
             data.append({"name": name, 'url': url, 'JSONdata': JSONdata})
     return data
 
+
+def excel07_fill_in_blanks(path,row=None,col=None,range=[0,0]):
+    wb = openpyxl.load_workbook(path)
+    sheet = wb['Sheet1']
+    previous_value=None
+    if(col!=None):
+        for cell in sheet[col][range[0]:range[1]]:
+            if(cell.value!=None):
+                print(cell.value)
+                previous_value=cell.value
+            else:
+                print(previous_value)
+    if(row!=None):
+        for cell in sheet[row][range[0]:range[1]]:
+            if(cell.value!=None):
+                print(cell.value)
+                previous_value=cell.value
+            else:
+                print(previous_value)
+                
+if __name__=="__main__":
+    path="/Users/yuyang/OneDrive/Research Symposium presentation schedule.xlsx"
+    excel07_fill_in_blanks(path,col="F",range=[0,98])
