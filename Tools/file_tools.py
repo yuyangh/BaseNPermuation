@@ -144,7 +144,7 @@ if __name__ == "__main__":
     # select_random(path0,3)
 
     # detectNullFile("/Users/yuyanghuang/Downloads/online_test")
-    for file in os.listdir("/Users/yuyanghuang/Downloads/online_test"):
+    for file in os.listdir("/Users/yuyang/Downloads"):
         print(file)
     # originalDirectory = "/Users/yuyanghuang/PycharmProjects/MachineLearning/OCR_Project/data/门头定位-数据图片/"
     # newDirectory = "/Users/yuyanghuang/PycharmProjects/MachineLearning/OCR_Project/data/门头定位-数据图片 estimate对比不一致 原图/"
